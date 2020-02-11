@@ -1,0 +1,48 @@
+// Цвета
+$primary: #000;
+$secondary: #fff;
+
+
+//Кнопка
+@mixin btn($primary,$secondary){
+  border: 2px solid $primary;
+  background: $primary;
+  padding: 15px 50px;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: .3s;
+  border-radius: 30px;
+  color: $secondary;
+  cursor: pointer;
+  &:hover{
+    background: $secondary;
+    color: $primary;
+  }
+}
+
+//Адаптивка
+@mixin max_1200($width: 1200px){
+  @media screen and (max-width:$width){
+    @content;  }
+}
+@mixin max_992($width: 992px){
+  @media screen and (max-width:$width){
+    @content;  }
+}
+@mixin max_768($width: 768px){
+  @media screen and (max-width:$width){
+    @content;  }
+}
+@mixin max_480($width: 480px){
+  @media screen and (max-width:$width){
+    @content;  }
+}
+@mixin max_320($width: 320px){
+  @media screen and (max-width:$width){
+    @content;  }
+}
+@mixin max_240($width: 240px){
+  @media screen and (max-width:$width){
+    @content;  }
+}
